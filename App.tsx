@@ -46,7 +46,7 @@ const junteMequi = require('./src/assets/images/junteMequi.jpeg');
 export default function App() {
    return (
       <View style={styles.container}>
-         <StatusBar style="dark" />
+         <StatusBar style="auto" />
          <Header />
          <ScrollView showsVerticalScrollIndicator={false}>
             <Carousel
