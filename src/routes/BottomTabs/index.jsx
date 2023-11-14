@@ -1,5 +1,5 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Image } from 'react-native';
+import { Image, Text } from 'react-native';
 import { Home } from '../../screens/Home/index';
 import Cupons from '../../screens/Cupons/index';
 import logo from '../../assets/images/logo.png';
@@ -15,26 +15,36 @@ function BottomTabs() {
          }}>
          <Tab.Screen
             options={{
-               tabBarIcon: ({ color }) => (
+               tabBarIcon: ({ focused }) => (
                   <Image
                      resizeMode="contain"
                      source={logo}
-                     style={{ tintColor: color, width: 25 }}
+                     style={{ tintColor: focused ? '#FFC72C' : '#b3b3b3', width: 25 }}
                   />
+               ),
+               tabBarLabel: ({ focused, color }) => (
+                  <Text style={{ color: focused ? 'black' : color, fontSize: 12 }}>Home</Text>
                )
             }}
             name="Home"
             component={Home}
          />
-         <Tab.Screen options={{
-               tabBarIcon: ({ color }) => (
+         <Tab.Screen
+            options={{
+               tabBarIcon: ({ focused }) => (
                   <Image
                      resizeMode="contain"
                      source={cupom}
-                     style={{ tintColor: color, width: 25 }}
+                     style={{ tintColor: focused ? '#FFC72C' : '#b3b3b3', width: 25 }}
                   />
+               ),
+               tabBarLabel: ({ focused, color }) => (
+                  <Text style={{ color: focused ? 'black' : color, fontSize: 12 }}>Cupons</Text>
                )
-            }} name="Cupons" component={Cupons} />
+            }}
+            name="Cupons"
+            component={Cupons}
+         />
       </Tab.Navigator>
    );
 }
