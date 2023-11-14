@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { ITEM_WIDTH, SLIDER_WIDTH } from './src/util/dimensions';
+import { ITEM_WIDTH } from '../../util/dimensions';
 
 const styles = StyleSheet.create({
    container: {

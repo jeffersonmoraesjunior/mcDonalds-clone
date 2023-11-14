@@ -1,10 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { View, Image, ScrollView } from 'react-native';
 import Carousel from 'react-native-snap-carousel';
-import { ITEM_WIDTH, SLIDER_WIDTH } from './src/util/dimensions';
-import { Header } from './src/components/Header/index';
-import { EncontreCupons } from './src/components/EncontreCupons';
-import { CarouselCupons } from './src/components/CarouselCupons';
+import { ITEM_WIDTH, SLIDER_WIDTH } from '../../util/dimensions';
+import { Header } from '../../components/Header/index';
+import { EncontreCupons } from '../../components/EncontreCupons';
+import { CarouselCupons } from '../../components/CarouselCupons';
 import styles from './styles';
 
 type Props = {
@@ -16,13 +16,13 @@ type Props = {
 
 const carouselItems = [
    {
-      image: require('./src/assets/images/1.jpeg')
+      image: require('../../assets/images/1.jpeg')
    },
    {
-      image: require('./src/assets/images/2.jpeg')
+      image: require('../../assets/images/2.jpeg')
    },
    {
-      image: require('./src/assets/images/3.jpeg')
+      image: require('../../assets/images/3.jpeg')
    }
 ];
 
