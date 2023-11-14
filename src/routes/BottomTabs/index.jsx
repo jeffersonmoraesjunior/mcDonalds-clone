@@ -6,9 +6,11 @@ const Tab = createBottomTabNavigator();
 
 function BottomTabs() {
    return (
-      <Tab.Navigator>
-         <Tab.Screen name="home" component={Home} />
-         <Tab.Screen name="cupons" component={Cupons} />
+      <Tab.Navigator screenOptions={{
+         headerShown: false,
+      }}>
+         <Tab.Screen name="Home" component={Home} />
+         <Tab.Screen name="Cupons" component={Cupons} />
       </Tab.Navigator>
    );
 }
