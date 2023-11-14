@@ -4,8 +4,7 @@ import { ITEM_WIDTH, SLIDER_WIDTH } from '../../util/dimensions';
 const styles = StyleSheet.create({
    container: {
       paddingHorizontal: 10,
-      marginTop: 50,
-      border: '1px solid #000990'
+      marginTop: 50
    },
    textCarousel: {
       fontSize: 24,
@@ -17,7 +16,7 @@ const styles = StyleSheet.create({
       marginTop: 10
    },
    carouselImage: {
-      resizeMode: 'cover',
+      resizeMode: 'contain',
       width: 'auto',
       height: 150,
       marginRight: 10

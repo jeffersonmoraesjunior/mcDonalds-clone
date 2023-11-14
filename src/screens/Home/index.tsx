@@ -1,11 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { View, Image, ScrollView } from 'react-native';
-import Carousel from 'react-native-snap-carousel';
 import { ITEM_WIDTH, SLIDER_WIDTH } from '../../util/dimensions';
 import { Header } from '../../components/Header/index';
-import { EncontreCupons } from '../../components/EncontreCupons';
-import { CarouselCupons } from '../../components/CarouselCupons';
 import { BoxTextImage } from '../../components/BoxTextImage';
+import { MyCarousel } from '../../components/Carousel/index';
 import styles from './styles';
 
 type Props = {
@@ -50,16 +48,7 @@ export const Home = () => {
          <StatusBar style="auto" />
          <Header />
          <ScrollView showsVerticalScrollIndicator={false}>
-            <Carousel
-               data={carouselItems}
-               renderItem={carouselCardItem}
-               sliderWidth={SLIDER_WIDTH}
-               itemWidth={ITEM_WIDTH}
-               useScrollView={true}
-               autoplayDelay={5000}
-               autoplay={true}
-               loop={true}
-            />
+            <MyCarousel />
             <View style={styles.imageContainer}>
                <Image source={junteMequi} style={styles.image} />
             </View>

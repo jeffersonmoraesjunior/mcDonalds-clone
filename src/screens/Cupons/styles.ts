@@ -3,7 +3,6 @@ import { ITEM_WIDTH, SLIDER_WIDTH } from '../../util/dimensions';
 
 const styles = StyleSheet.create({
    container: {
-      // flex: 1,
       backgroundColor: '#ffffff'
    },
    imageContainer: {

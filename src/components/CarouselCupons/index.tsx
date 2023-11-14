@@ -37,11 +37,11 @@ function carouselCardItem({ item, index }: Props) {
 }
 const imagensAleatorias = shuffle(carouselItems);
 
-const CarouselCupons = ({text}) => {
+const CarouselCupons = ({ text }) => {
    return (
       <View style={styles.container}>
          <Text style={styles.textCarousel}>{text}</Text>
-         <FlatList horizontal={true} data={imagensAleatorias} renderItem={carouselCardItem} />        
+         <FlatList horizontal={true} data={imagensAleatorias} renderItem={carouselCardItem} />
       </View>
    );
 };
